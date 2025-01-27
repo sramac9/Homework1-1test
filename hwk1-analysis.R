@@ -2,7 +2,7 @@
 # Meta --------------------------------------------------------------------
 
 ## Title:         Econ/HLTH 470 Homework 1 Answers
-## Author:        Ian McCarthy
+## Author:        SAMMY RAMACHER
 ## Date Created:  2/1/2020
 ## Date Edited:   1/28/2024
 ## Description:   This file renders/runs all relevant R code for the assignment
