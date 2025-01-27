@@ -4,7 +4,7 @@
 
 for (y in 2010:2015) {
   ## Basic contract/plan information
-  ma.path=paste0("/data/input/CPSC_Enrollment_2015_12/CPSC_Enrollment_Info_2015_12.csv")
+  ma.path=paste0("/Users/sammyram/Documents/Github/Homework1-1test/data/input/CPSC_Enrollment_2015_01.csv")
   contract.info=read_csv(ma.path,
                          skip=1,
                          col_names = c("contractid","planid","org_type","plan_type",
