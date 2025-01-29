@@ -2,9 +2,18 @@
 ## Read in enrollment data for january of each year
 #########################################################################
 
+
+install.packages("readr", "tidyverse", "dplyr")
+
+# Load the readr package
+library(readr)
+library(tidyverse)
+library(dplyr)
+
+
 for (y in 2010:2015) {
   ## Basic contract/plan information
-  ma.path=paste0("/Users/sammyram/Documents/Github/Homework1-1test/data/input/CPSC_Enrollment_2015_01.csv")
+  ma.path=paste0("data/input/CPSC_Enrollment_Info_2015_01.csv")
   contract.info=read_csv(ma.path,
                          skip=1,
                          col_names = c("contractid","planid","org_type","plan_type",
@@ -85,4 +94,3 @@ for (y in 2011:2015) {
 
 write_rds(full.ma.data,"data/output/full_ma_data.rds")
 sapply(paste0("ma_data_", 2010:2015, ".rds"), unlink)
-inst
