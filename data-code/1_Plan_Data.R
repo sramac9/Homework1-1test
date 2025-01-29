@@ -37,8 +37,6 @@ for (y in 2010:2015) {
   contract.info = contract.info %>%
     group_by(contractid, planid) %>%
     mutate(id_count=row_number())
-    
-  contract.info = contract.info %>%
     filter(id_count==1) %>%
     select(-id_count)
     

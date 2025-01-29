@@ -1,0 +1,20 @@
+
+#load in data
+if (!require("pacman")) install.packages("pacman")
+pacman::p_load(tidyverse, ggplot2, dplyr, lubridate, stringr, readxl, data.table, gdata, readr, gifski, gapminder, survey)
+
+library(gridExtra)
+library(grid)
+
+full.ma.data <- readRDS('data/output/final_ma_data.rds')
+
+# Question 1
+## Provide a table of count plans under each plan type. 
+plan_type_count <- plan.data %>%
+  group_by(plan_type) %>%
+  summarize(plan_count = n(), .groups = "drop")
+
+table_1 <- tableGrob(plan_type_count)
+
+# Draw the table
+ggsave("plan_type_count.png", plot = table_1, width = 6, height = 3, dpi = 300)

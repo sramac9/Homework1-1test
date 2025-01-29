@@ -42,7 +42,13 @@ pacman::p_load(tidyverse, ggplot2, dplyr, lubridate, stringr, readxl, data.table
                            contract_date = col_character()
                          ))
 
-  
+  contract.info = contract.info %>%
+    group_by(contractid, planid) %>%
+    mutate(id_count=row_number()) %>%
+    filter(id_count==1) %>%
+    select(-id_count)
+
+
       ## Merge contract info with enrollment info
   plan.data = contract.info %>%
     left_join(enroll.info, by=c("contractid", "planid")) %>%
