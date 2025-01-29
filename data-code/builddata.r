@@ -64,3 +64,5 @@ pacman::p_load(tidyverse, ggplot2, dplyr, lubridate, stringr, readxl, data.table
     fill(org_type,org_name,org_marketing_name,parent_org)
 # saving new clean data
 saveRDS(plan.data, file = "data/output/ma_data2015")
+
+
