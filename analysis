@@ -8,6 +8,22 @@ library(grid)
 
 full.ma.data <- readRDS('data/output/final_ma_data.rds')
 
+
+#loading objects into markdown (using his code)
+
+## add code from screenshot here later
+
+plan.type.enroll <- final.plans %>% group_by(plan_type) %>% summarize(n=n(), enrollment=mean(enrollment, na.rm=TRUE)) %>% 
+
+final.data <- final.plans %>%
+  inner_join(contract.service.area %>%
+    select(contractid, fips, year),
+    by=c("contractid", "fips", "year")) %>%
+    filter(!is.na(enrollment))
+
+rm(list=c("full.ma.data", "contract.service.area", "final.data"))
+save.image("submission/Hwk1_workspace.Rdata")
+
 # Question 1
 ## Provide a table of count plans under each plan type. 
 plan_type_count <- plan.data %>%

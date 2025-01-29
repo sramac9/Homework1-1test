@@ -1,10 +1,10 @@
 ---
 title: "Homework 1"
-subtitle: "Research Methods, Spring 2024"
+subtitle: "Research Methods, Spring 2025"
 author: "Sammy Ramacher"
 format:
   pdf:
-    output-file: "sammyram-i-hwk1-3"
+    output-file: "sammyram-i-hwk1-2"
     output-ext:  "pdf"
     header-includes:
       - \usepackage{float}
@@ -27,7 +27,7 @@ pacman::p_load(tidyverse, ggplot2, dplyr, lubridate, readr, readxl, hrbrthemes, 
 #| include: false
 #| eval: true
  
-load("Homework1-Sub3_workspace.Rdata")
+load("Hwk1_workspace.Rdata")
 ```
 
 
