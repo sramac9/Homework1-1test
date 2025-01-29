@@ -16,4 +16,4 @@ final.data <- full.ma.data %>%
            (planid < 800 | planid >= 900) &
            !is.na(planid) & !is.na(fips))
 
-saveRDS(final.data, file = "data/output/finaldata")
+saveRDS(final.data, file = "data/output/final_ma_data.rds")
